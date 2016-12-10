@@ -1,0 +1,20 @@
+{
+  "name": "html-template-binder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "babel-tape-runner \"spec/**.spec.js\"| tap-spec"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.20.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-tape-runner": "^2.0.1",
+    "deepfreeze": "^2.0.0",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.6.3"
+  }
+}
