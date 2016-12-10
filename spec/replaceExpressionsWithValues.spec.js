@@ -1,5 +1,5 @@
 import test from 'tape'
-import {replaceExpressionsWithValues} from '../index'
+import {replaceExpressionsWithValues} from '../util'
 
 test('replace single expression value', t => {
 	t.plan(1);
@@ -11,7 +11,7 @@ test('replace single expression value', t => {
 
 	const result = replaceExpressionsWithValues(match, matchesWithValues);
 
-	t.ok(result, val); 
+	t.equal(result, val); 
 
 	t.end()
 })
@@ -24,8 +24,8 @@ test('replace multiple values', t => {
 	const match1 = '{{mikeName}}';
 	const match2 = '{{samName}}';
 	const matchesWithValues = [
-		{match: match1, val1},
-		{match: match2, val2}
+		{match: match1, val: val1},
+		{match: match2, val: val2}
 	];
 
 	const rawString = `Heres the string ${match1}. Heres the second string ${match2}`;
@@ -33,7 +33,7 @@ test('replace multiple values', t => {
 
 	const result = replaceExpressionsWithValues(rawString, matchesWithValues);
 
-	t.ok(result, expectedString);
+	t.equal(result, expectedString);
 })
 
 test('replace str with duplicate expressions', t => {
@@ -51,7 +51,7 @@ test('replace str with duplicate expressions', t => {
 
 	const result = replaceExpressionsWithValues(rawString, matchesWithValues);
 
-	t.ok(result, expectedString);
+	t.equal(result, expectedString);
 })
 
 test('str with no expressions returns same str', t => {
@@ -61,5 +61,5 @@ test('str with no expressions returns same str', t => {
 
 	const result = replaceExpressionsWithValues(rawString, []);
 
-	t.ok(result, rawString);
+	t.equal(result, rawString);
 })

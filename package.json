@@ -1,14 +1,14 @@
 {
-  "name": "html-template-binder",
-  "version": "1.0.0",
-  "description": "",
+  "name": "template-object-binder",
+  "version": "0.0.0",
+  "description": "Object-to-string binder!",
   "main": "index.js",
   "scripts": {
     "test": "babel-tape-runner \"spec/**.spec.js\"| tap-spec"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "mcMickJuice",
+  "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.20.0",
     "babel-preset-es2015": "^6.18.0",

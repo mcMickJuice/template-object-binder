@@ -1,5 +1,6 @@
 import test from 'tape'
-import { extractDelimitedExpressionFromString, defaultConfig } from '../index'
+import { extractDelimitedExpressionFromString } from '../util'
+import {defaultConfig} from '../index'
 
 test('extract one value from html template', t => {
 	t.plan(3)

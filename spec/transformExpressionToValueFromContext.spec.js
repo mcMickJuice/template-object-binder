@@ -1,5 +1,5 @@
 import test from 'tape'
-import {transformExpressionToValueFromContext} from '../index'
+import {transformExpressionToValueFromContext} from '../util'
 import deepfreeze from 'deepfreeze';
 
 test('extract top level property', t => {
